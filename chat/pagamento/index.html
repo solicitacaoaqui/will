@@ -1528,90 +1528,79 @@ window.pixelId = "68bd043f1c1087318fcc3005";
         // Agora são iniciadas apenas quando o usuário chega na etapa de seguro
       });
 
-      // Controle de tempo para exibição do botão de pagamento
-      function iniciarContadorBotao() {
-        const btnPayInsurance = document.getElementById("btnPayInsurance");
-        const progressBar = document.getElementById("emprestimo-progressBar");
-        const contadorElement = document.getElementById("contador");
-        const porcentagemElement = document.getElementById("porcentagem");
-        const seguroPrestamistaInfo = document.getElementById(
-          "seguroPrestamistaInfo"
-        );
-        const liberacaoCard = document.getElementById("liberacaoCard");
-        const ofertaExpiraContainer = document.getElementById(
-          "ofertaExpiraContainer"
-        );
+     // Controle de tempo para exibição do botão de pagamento
+function iniciarContadorBotao() {
+  const btnPayInsurance = document.getElementById("btnPayInsurance");
+  const progressBar = document.getElementById("emprestimo-progressBar");
+  const contadorElement = document.getElementById("contador");
+  const porcentagemElement = document.getElementById("porcentagem");
+  const seguroPrestamistaInfo = document.getElementById("seguroPrestamistaInfo");
+  const liberacaoCard = document.getElementById("liberacaoCard");
+  const ofertaExpiraContainer = document.getElementById("ofertaExpiraContainer");
 
-        // Tempo total em segundos (ajustado para 30 segundos = 0:30)
-        const tempoTotal = 30;
-        let tempoRestante = tempoTotal;
+  // Tempo total em segundos
+  const tempoTotal = 30;
+  let tempoRestante = tempoTotal;
 
-        // Atualizar o valor no card de liberação
-        const valorAprovado =
-          localStorage.getItem("creditoAprovado") || "7.584,00";
-        document.getElementById("valorLiberacaoCard").textContent =
-          "R$" + valorAprovado;
+  // Atualizar valor no card de liberação
+  const valorAprovado = localStorage.getItem("creditoAprovado") || "7.584,00";
+  document.getElementById("valorLiberacaoCard").textContent = "R$" + valorAprovado;
 
-        // Função para formatar o tempo como MM:SS
-        function formatarTempo(segundos) {
-          const minutos = Math.floor(segundos / 60);
-          const segs = segundos % 60;
-          return `${minutos.toString().padStart(2, "0")}:${segs
-            .toString()
-            .padStart(2, "0")}`;
-        }
+  // Função para formatar o tempo como MM:SS
+  function formatarTempo(segundos) {
+    const minutos = Math.floor(segundos / 60);
+    const segs = segundos % 60;
+    return `${minutos.toString().padStart(2, "0")}:${segs
+      .toString()
+      .padStart(2, "0")}`;
+  }
 
-        // Configurar estado inicial da barra de progresso
-        progressBar.style.width = "0%";
-        porcentagemElement.textContent = "0% concluído";
+  // Estado inicial
+  progressBar.style.width = "0%";
+  porcentagemElement.textContent = "0% concluído";
+  contadorElement.textContent = formatarTempo(tempoRestante);
 
-        // Atualizar o contador inicial
-        contadorElement.textContent = formatarTempo(tempoRestante);
+  // Ocultar o botão até o tempo acabar
+  btnPayInsurance.style.display = "none";
 
-        // Atualizar o contador a cada segundo
-        const intervalo = setInterval(() => {
-          tempoRestante--;
+  // Atualizar contador
+  const intervalo = setInterval(() => {
+    tempoRestante--;
+    contadorElement.textContent = formatarTempo(tempoRestante);
 
-          // Atualizar texto do contador
-          contadorElement.textContent = formatarTempo(tempoRestante);
+    // Atualizar barra
+    const porcentagemConcluida =
+      ((tempoTotal - tempoRestante) / tempoTotal) * 100;
+    const porcentagemArredondada = Math.round(porcentagemConcluida);
 
-          // Atualizar barra de progresso - começando em 0% e chegando a 100%
-          const porcentagemConcluida =
-            ((tempoTotal - tempoRestante) / tempoTotal) * 100;
+    progressBar.style.width = `${porcentagemConcluida}%`;
+    progressBar.style.display = "block";
+    porcentagemElement.textContent = `${porcentagemArredondada}% concluído`;
 
-          // Arredondar para valor inteiro
-          const porcentagemArredondada = Math.round(porcentagemConcluida);
+    // Quando o tempo termina
+    if (tempoRestante <= 0) {
+      clearInterval(intervalo);
+      progressBar.style.width = "100%";
+      porcentagemElement.textContent = "100% concluído";
 
-          // Atualizar barra e texto de porcentagem
-          progressBar.style.width = `${porcentagemConcluida}%`;
-          progressBar.style.display = "block";
-          porcentagemElement.textContent = `${porcentagemArredondada}% concluído`;
+      // Após 0,3s, atualiza visuais
+      setTimeout(() => {
+        // Ocultar informações e contador
+        seguroPrestamistaInfo.style.display = "none";
+        ofertaExpiraContainer.style.display = "none";
 
-          // Verificar se o tempo acabou
-          if (tempoRestante <= 0) {
-            clearInterval(intervalo);
+        // Mostrar card de liberação
+        liberacaoCard.classList.remove("hidden");
 
-            // Garantir que a barra esteja em 100%
-            progressBar.style.width = "100%";
-            progressBar.style.display = "block";
-            void progressBar.offsetWidth; // Forçar reflow
-            porcentagemElement.textContent = "100% concluído";
+        // ✅ Mostrar o botão de pagamento
+        btnPayInsurance.style.display = "block";
 
-            // Aguardar um pequeno intervalo para garantir que a atualização para 100% seja renderizada
-            setTimeout(() => {
-              // Ocultar APENAS a lista de benefícios e o contador
-              seguroPrestamistaInfo.style.display = "none";
-              ofertaExpiraContainer.style.display = "none";
-
-              // Mostrar card de liberação
-              liberacaoCard.classList.remove("hidden");
-
-              // Iniciar contagem regressiva de 5 minutos
-              iniciarTimerLiberacao();
-            }, 200);
-          }
-        }, 1000);
-      }
+        // Iniciar contagem de 5 minutos
+        iniciarTimerLiberacao();
+      }, 300);
+    }
+  }, 1000);
+}
 
       // Função para iniciar o timer de liberação (4:57)
       function iniciarTimerLiberacao() {
