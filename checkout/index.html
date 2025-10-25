@@ -1,0 +1,1178 @@
+<html lang="pt-BR"><head></head><body cz-shortcut-listen="true">﻿
+    
+<script>
+  window.pixelId = "689b3a34e8b8593226787dbb";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script><script src="js/latest.js" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids="" async="" defer=""></script>
+
+
+<link href="css/lobibox.min.css" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento PIX</title>
+<link rel="shortcut icon" href="logo.png">
+<link rel="shortcut icon" href="logo.png">
+<link rel="icon" href="logo.png" sizes="32x32">
+<link rel="icon" href="logo.png" sizes="192x192">
+<link rel="apple-touch-icon" href="logo.png">
+<meta name="msapplication-TileImage" content="logo.png">
+<!-- Swiper (para carrosséis, se usar) -->
+<link href="css/swiper-bundle.min.css" rel="stylesheet">
+
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- FontAwesome -->
+<link href="css/all.min.css" rel="stylesheet">
+
+<!-- Style principal (usa o seu arquivo local se quiser estilização própria) -->
+<link href="css/style.css?v=1.0.3" rel="stylesheet">
+
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "swxyif3oa6");
+</script>
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1402753874376582');
+    fbq('track', 'InitiateCheckout');
+</script>
+
+<noscript>
+    <img height='1' width='1' style='display:none' src='../../tr-1?id=1402753874376582&ev=InitiateCheckout&noscript=1'>
+</noscript><style>
+    :root {
+        --primary-color: #f5d317;
+        --primary-hover: #f5d317;
+        --success-color: #4cc9a0;
+        --text-color: #2b2d42;
+        --text-light: #8d99ae;
+        --background: #f8f9fa;
+        --card-bg: #ffffff;
+        --border-color: #e9ecef;
+        --highlight-color: #ffd60a;
+        --countdown-color: #ef233c;
+    }
+
+    body {
+        background-color: var(--background);
+        color: var(--text-color);
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+    }
+
+    @supports (font-variation-settings: normal) {
+        body {
+            font-family: 'Inter var', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+    }
+
+    .top-bar {
+        background-color: var(--card-bg);
+        border-bottom: 1px solid var(--border-color);
+        padding: 16px 24px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    }
+
+    .top-bar-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .logo {
+        height: auto;
+        max-width: 180px;
+        width: 100%;
+        transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+        transform: scale(1.02);
+    }
+
+    .secure-badge {
+        font-size: 14px;
+        color: var(--text-light);
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        background-color: rgba(67, 97, 238, 0.1);
+        padding: 8px 12px;
+        border-radius: 20px;
+        font-weight: 500;
+    }
+
+    .secure-badge svg {
+        margin-right: 6px;
+        stroke: var(--primary-color);
+    }
+
+    .container {
+        max-width: 520px;
+        margin: 0 auto;
+        padding: 32px 16px;
+    }
+
+    .card {
+        background-color: var(--card-bg);
+        border-radius: 16px;
+        padding: 32px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        border: 1px solid var(--border-color);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    }
+
+    .title {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 24px;
+        text-align: center;
+        color: var(--text-color);
+        position: relative;
+        padding-bottom: 16px;
+    }
+
+    .title:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background-color: var(--primary-color);
+        border-radius: 3px;
+    }
+
+    .pix-value-label {
+        color: var(--text-light);
+        margin-bottom: 8px;
+        text-align: center;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .pix-amount {
+        font-size: 32px;
+        color: black;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    .pix-input {
+        display: block;
+        margin: 0 auto 16px auto;
+        width: 83%;
+        padding: 16px;
+        border: 1px solid var(--border-color);
+        border-radius: 10px;
+        background-color: var(--card-bg);
+        color: var(--text-color);
+        font-size: 16px;
+        text-align: center;
+        font-family: 'Roboto Mono', monospace;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .pix-input:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+    }
+
+    .copy-button {
+        background-color: var(--primary-color);
+        color: black;
+        border: none;
+        padding: 16px;
+        border-radius: 10px;
+        font-weight: 600;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 16px;
+    }
+
+    .copy-button:hover {
+        background-color: var(--primary-hover);
+        transform: translateY(-1px);
+        box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+    }
+
+    .copy-button:active {
+        transform: translateY(0);
+    }
+
+    .copy-button svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .instructions {
+        margin-top: 40px;
+    }
+
+    .instructions h2 {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        color: var(--text-color);
+    }
+
+    .instruction-item {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 20px;
+        color: var(--text-color);
+        font-size: 15px;
+        align-items: flex-start;
+    }
+
+    .instruction-item svg {
+        flex-shrink: 0;
+        width: 24px;
+        height: 24px;
+        stroke: var(--primary-color);
+        stroke-width: 1.5;
+    }
+
+    .instruction-text {
+        margin: 0;
+        line-height: 1.5;
+    }
+
+    #countdown {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--countdown-color);
+        text-align: center;
+        margin: 20px 0;
+        padding: 12px;
+        background-color: rgba(239, 35, 60, 0.1);
+        border-radius: 8px;
+    }
+
+    .pix-wrapper {
+        max-width: 420px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .hidden {
+        display: none !important;
+    }
+
+    #loadingPage {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.9);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        backdrop-filter: blur(5px);
+    }
+
+    .loader {
+        border: 5px solid #f3f3f3;
+        border-top: 5px solid var(--primary-color);
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    .qr-code-container {
+        display: none;
+        justify-content: center;
+        margin: 24px 0;
+    }
+
+    .qr-code {
+        max-width: 200px;
+        background-color: white;
+        padding: 16px;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        border: 1px solid var(--border-color);
+    }
+
+    /* Pagamento Confirmado */
+    #pagamentoConfirmado .card {
+        text-align: center;
+    }
+
+    #pagamentoConfirmado svg {
+        margin-bottom: 16px;
+        stroke: var(--success-color);
+    }
+
+    #pagamentoConfirmado h1 {
+        color: var(--success-color);
+    }
+
+    #pagamentoConfirmado p {
+        margin: 8px 0;
+        color: var(--text-color);
+    }
+
+    @media (max-width: 480px) {
+        .container {
+            padding: 24px 12px;
+        }
+        
+        .card {
+            padding: 24px 16px;
+        }
+        
+        .title {
+            font-size: 20px;
+        }
+        
+        .pix-amount {
+            font-size: 28px;
+        }
+        
+        .secure-badge {
+            font-size: 13px;
+            padding: 6px 10px;
+        }
+        
+        .logo {
+            max-width: 140px;
+        }
+        
+        .instruction-item {
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .card {
+        animation: fadeIn 0.5s ease-out;
+    }
+</style>
+
+<link href="css2-3" rel="stylesheet">
+
+<script>
+  window.pixelId = "670d499135d74746279730c8";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+<script src="js/latest.js" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids="" async="" defer=""></script>
+
+
+
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '589634950899742');
+    fbq('track', 'InitiateCheckout');
+</script>
+
+<noscript>
+    <img height='1' width='1' style='display:none' src='../../tr-2?id=1090728943045347&ev=InitiateCheckout&noscript=1'>
+</noscript>
+
+
+
+
+
+    <!-- Loading Screen -->
+    <div id="loadingPage" class="hidden">
+        <div class="loader"></div>
+    </div>
+
+    <div id="loginPage">
+        <div class="top-bar">
+            <div class="top-bar-content">
+                <img src="images-3" alt="Logo" class="logo">
+                <div class="secure-badge">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 12l2 2 4-4"></path>
+                        <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span>Ambiente seguro</span>
+                </div>
+            </div>
+        </div>
+                   
+<img src="images/bannnnnner.png" alt="" width="100%">
+
+        <div class="container">
+            <div class="card">
+                <div class="text-center">
+                    <h1 class="title">Finalize o pagamento</h1>
+                </div>
+
+                <div class="pix-value">
+                    <p class="pix-value-label">Valor do pix:</p>
+                    <p class="pix-amount">R$ 21.63</p>
+                </div>
+
+                <div class="pix-wrapper">
+<input type="text" class="pix-input" id="codigo-input" readonly="">
+<div id="pix-area">
+  <div class="qr-code-container">
+    <img id="pix-qr" class="qr-code" src="" alt="QR Code Pix">
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const params = new URLSearchParams(window.location.search);
+
+  // Pega os dados da URL
+  const nome = decodeURIComponent(params.get("nome") || "Cliente não identificado");
+  const telefone = params.get("numero") || "Não informado";
+  const documento = params.get("cpf") || "Não informado";
+
+  // Atualiza os campos visuais
+  document.querySelector(".info-value:nth-child(2)").textContent = nome;
+  document.querySelector(".info-value:nth-child(4)").textContent = telefone;
+  document.querySelector(".info-value:nth-child(6)").textContent = documento;
+});
+</script>
+
+<div class="checkout-wrapper">
+  <p class="pix-value-label" style="text-align:center; margin-bottom: 12px;">
+    Clique no botão abaixo para prosseguir com o pagamento:
+  </p>
+
+  <a href="	https://comprasseguradaonline.store/c/ac2de4d0a7" id="btnCheckout" class="checkout-button">
+    <i class="fa-solid fa-lock"></i> Pagar agora
+  </a>
+</div>
+
+<style>
+.checkout-button {
+  background: linear-gradient(135deg, #f5d317, #ffd60a);
+  color: #000;
+  font-weight: 700;
+  font-size: 17px;
+  text-transform: uppercase;
+  padding: 16px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(245, 211, 23, 0.4);
+  transition: all 0.25s ease;
+}
+
+.checkout-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(245, 211, 23, 0.55);
+}
+
+.checkout-button i {
+  font-size: 18px;
+}
+</style>
+
+                </div>
+
+                <div id="imagemContainer" class="hidden qr-code-container">
+                    <!-- QR Code será inserido aqui -->
+                </div>
+
+                <!-- Elemento para exibir a contagem regressiva -->
+                <!-- Substitua este elemento -->
+<!-- <div id="countdown"></div> -->
+
+<!-- Pelo novo cronômetro visual -->
+<div class="countdown-container">
+    <div class="countdown-header">
+        <span>Tempo restante para pagamento:</span>
+        <span id="countdown-timer">08:00</span>
+    </div>
+    <div class="countdown-bar">
+        <div class="countdown-progress" id="countdown-progress"></div>
+    </div>
+</div>
+
+<style>
+.countdown-container {
+    margin: 25px 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.countdown-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #555;
+}
+
+.countdown-bar {
+    height: 8px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.countdown-progress {
+    height: 100%;
+    width: 100%;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    transition: width 1s linear, background-color 0.3s;
+}
+
+/* Estilos para quando o tempo estiver acabando */
+.countdown-warning {
+    background-color: #FFA500;
+}
+
+.countdown-danger {
+    background-color: #FF5252;
+}
+
+#countdown-timer {
+    font-weight: bold;
+    color: var(--text-color);
+}
+</style>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    // Configuração inicial
+    let countdownInterval;
+    const totalTime = 08 * 60; // 30 minutos em segundos
+    let timeLeft = totalTime;
+    
+    // Elementos do DOM
+    const $countdownTimer = $('#countdown-timer');
+    const $countdownProgress = $('#countdown-progress');
+    
+    // Função para formatar o tempo
+    function formatTime(seconds) {
+        const minutes = Math.floor(seconds / 60);
+        const remainingSeconds = seconds % 60;
+        return `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
+    }
+    
+    // Função para atualizar a barra de progresso
+    function updateProgressBar() {
+        const progressPercentage = (timeLeft / totalTime) * 100;
+        $countdownProgress.css('width', progressPercentage + '%');
+        
+        // Mudar cor conforme o tempo diminui
+        if (progressPercentage < 20) {
+            $countdownProgress.removeClass('countdown-warning').addClass('countdown-danger');
+        } else if (progressPercentage < 50) {
+            $countdownProgress.removeClass('countdown-danger').addClass('countdown-warning');
+        } else {
+            $countdownProgress.removeClass('countdown-warning countdown-danger');
+        }
+    }
+    
+    // Iniciar contagem regressiva
+    function startCountdown() {
+        countdownInterval = setInterval(function() {
+            timeLeft--;
+            
+            // Atualizar exibição
+            $countdownTimer.text(formatTime(timeLeft));
+            updateProgressBar();
+            
+            if (timeLeft <= 0) {
+                clearInterval(countdownInterval);
+               
+                $countdownProgress.css('width', '0%');
+            }
+        }, 1000);
+    }
+    
+    // Iniciar o contador quando a página carregar
+    startCountdown();
+    updateProgressBar(); // Inicializar a barra
+});
+</script>
+   <div class="container">
+    <div class="card shopping-cart">
+ 
+        
+      <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+
+  // Lê parâmetros da URL
+  const nome = decodeURIComponent(params.get("nome") || "Não informado");
+  const telefone = params.get("numero") || "Não informado";
+  const cpf = params.get("cpf") || "Não informado";
+
+  // Atualiza o bloco de dados do cliente
+  const infoValues = document.querySelectorAll(".customer-info .info-value");
+
+  if (infoValues.length >= 3) {
+    infoValues[0].textContent = nome;
+    infoValues[1].textContent = telefone;
+    infoValues[2].textContent = cpf;
+  }
+
+  console.log("✅ Dados aplicados:", { nome, telefone, cpf });
+});
+</script>
+
+            
+            <!-- Seção de Dados do Pagador -->
+            <div class="order-section">
+                <h3 class="section-title">Dados do Cliente</h3>
+                <div class="customer-info">
+                    <div class="info-row">
+                        <span class="info-label">Nome:</span>
+                        <span class="info-value">IZABETH APARECIDA DE CARVALHO</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Telefone:</span>
+                        <span class="info-value">17997749749</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Documento:</span>
+                        <span class="info-value">25354497817</span>
+                    </div>
+                </div>
+            </div>
+            
+           
+            
+            <!-- Seção de Pagamento -->
+            <div class="order-section">
+                <h3 class="">Valor 100% reembolsável após liberação do empréstimo.</h3>
+                <div class="payment-method">
+                    <div class="method-icon">
+                                                                    </div>
+                    <div class="method-info">
+                        <h4> TAXA DE IMPOSTO</h4>
+                        <div class="amount-total">
+                            Total: <span class="total-value">R$ 21,63</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card-footer">
+            <div class="order-summary">
+                <div class="summary-row total">
+                    <span>Total:</span>
+                    <span>R$ 21,63</span>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    
+
+    <!-- Pagamento Confirmado (hidden por padrão) -->
+    <div id="pagamentoConfirmado" class="hidden">
+        <div class="container">
+            <div class="card">
+                <div class="text-center">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                        <path d="M22 4L12 14.01l-3-3"></path>
+                    </svg>
+                    <h1 class="title">Pagamento Confirmado!</h1>
+                    <p>Obrigado por sua compra.</p>
+                    <p>Data: <span id="data-pagamento"></span></p>
+                    <p>Protocolo: <span id="protocolo-pagamento"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+
+<style>
+.shopping-cart {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.order-section {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.section-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.section-title:before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 18px;
+    background: var(--primary-color);
+    margin-right: 10px;
+    border-radius: 2px;
+}
+
+.product-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+.product-info {
+    flex: 1;
+}
+
+.product-name {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.product-price {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.info-row {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.info-label {
+    font-weight: 600;
+    width: 120px;
+    color: #666;
+}
+
+.info-value {
+    flex: 1;
+    color: #333;
+}
+
+.payment-method {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: #f5f9ff;
+    border-radius: 8px;
+}
+
+.method-icon {
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-image: url('images/qNjKcdI.jpeg');
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+.method-info h4 {
+    margin: 0 0 5px 0;
+    color: #333;
+}
+
+.amount-total {
+    font-size: 16px;
+}
+
+.total-value {
+    font-weight: bold;
+    color: black;
+    font-size: 18px;
+}
+
+.card-footer {
+    background: #f9f9f9;
+   
+}
+
+.order-summary {
+    margin-bottom: 20px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #ddd;
+}
+
+.summary-row.total {
+    font-weight: bold;
+    font-size: 18px;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-top: 15px;
+}
+
+.btn-confirm {
+    padding: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 8px;
+    background: var(--primary-color);
+    border: none;
+    transition: all 0.3s;
+}
+
+.btn-confirm:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .info-row {
+        flex-direction: column;
+    }
+    
+    .info-label {
+        width: auto;
+        margin-bottom: 3px;
+    }
+}
+</style>
+<div class="container">
+
+<div style="
+ 
+">
+<img src="images/SyFeVNb.png" alt="" width="100%">
+
+</div></div>
+    <!-- Inclua o jQuery antes do seu script -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- Se estiver usando o toastr, inclua-o também -->
+    <link rel="stylesheet" href="css/toastr.min.css">
+    <script src="js/toastr.min.js"></script>
+  
+<!-- Adicione estas linhas no head do seu HTML -->
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <div class="footer-logo">
+                <img src="images/will-bank-white-1d8559536f4a79dab85d938bb8221d1617e814bc.png" alt="Logo" width="150">
+            </div>
+            <div class="footer-social">
+                <a href="#" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        
+        
+        <div class="footer-section">
+            <h3 class="footer-title">Atendimento</h3>
+            <ul class="footer-links">
+                <li><i class="fas fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1a7975746e7b6e755a6d737676787b747134797577">[email�protected]</a></li>
+                <li><i class="fas fa-phone-alt"></i> 0800 772 1026</li>
+                <li><i class="fas fa-clock"></i> Seg-Sex: 9h às 18h</li>
+            </ul>
+        </div>
+        
+    </div>
+    
+    <div class="footer-bottom">
+        <div class="footer-container">
+            <p>� 2025 Todos os direitos reservados. CNPJ: 36.272.465/0001-49</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+.site-footer {
+    background-color: #000000ff;
+    color: #ecf0f1;
+    padding: 40px 0 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 30px;
+}
+
+.footer-logo img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.footer-social {
+    display: none;
+    gap: 15px;
+}
+
+.social-icon {
+    color: #ecf0f1;
+    background-color: #34495e;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.footer-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+    color: #fff;
+}
+
+.footer-title:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-links a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.footer-links i {
+    color: var(--primary-color);
+    width: 16px;
+    text-align: center;
+}
+
+.payment-methods {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.payment-methods img {
+    border-radius: 4px;
+    background: white;
+    padding: 5px;
+}
+
+.security-seals img {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer-bottom {
+    background-color: #000000ff;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #7f8c8d;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .footer-section {
+        min-width: 100%;
+    }
+}
+</style>
+
+<!-- Adicione isso no head do seu HTML se ainda não tiver -->
+<link rel="stylesheet" href="css/all.min_1.css">
+<!-- Adicione este script no final do body, antes do fechamento </body> -->
+<script data-cfasync="false" src="js/email-decode.min.js"></script><script>
+$(document).ready(function() {
+  
+    
+    // Botão de copiar
+    $('#copyButton').click(function() {
+        const copyText = document.getElementById("codigo-input");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); // Para dispositivos móveis
+        
+        document.execCommand("copy");
+   
+        
+        // Mudar temporariamente o texto do botão
+        $(this).find('span').text('CÓDIGO COPIADO!');
+        $(this).css('background-color', '#212121');
+        $(this).css('color', '#fff');
+        
+        setTimeout(() => {
+            $('#copyButton').find('span').text('COPIAR CÓDIGO');
+            $('#copyButton').css('background-color', '#f5d317');
+            $('#copyButton').css('color', '#000');
+            
+        }, 10000);
+    });
+    
+    // Verificar status do pagamento periodicamente
+    function checkPaymentStatus() {
+        $.ajax({
+            url: 'https://workflows.zinho.art/webhook/e3358323-f6eb-42e5-8a54-7513d794b2c4/kodexpert/api/leo/:cpf',
+            method: 'POST',
+            data: JSON.stringify({ identificador: '1760554319.282368efed4f44ea98.71406540' }),
+            contentType: 'application/json',
+            dataType: 'json',
+            success: function(response) {
+                if (response && response.length > 0 && response[0].status === 'approved') {
+                    clearInterval(countdownInterval);
+                    $('#loginPage').addClass('hidden');
+                    $('#pagamentoConfirmado').removeClass('hidden');
+                    $('#data-pagamento').text(new Date().toLocaleString());
+                    $('#protocolo-pagamento').text(response[0].id_transaction);
+                    
+                   
+                }
+            },
+            error: function(xhr, status, error) {
+                console.error('Erro ao verificar status:', error);
+            }
+        });
+    }
+    
+    // Verificar a cada 30 segundos
+    setInterval(checkPaymentStatus, 30000);
+    
+    // Esconder loading screen quando a página carrega
+    setTimeout(function() {
+        $('#loadingPage').addClass('hidden');
+    }, 1000);
+});
+</script><script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "silz60upc3");
+</script>
+<script src="js/latest-2.js" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids="" async="" defer=""></script></body></html>

@@ -1,0 +1,50 @@
+[
+    {
+        "nome": "Joao Bosco Vivas Pereira",
+        "cpf": "42492556620",
+        "telefone": "61998055098",
+        "valor_emprestimo": "R$500 - R$1.000",
+        "renda_fixa": "Sim, aut\u00f4nomo",
+        "negativado": "Sim",
+        "solicitou_credito": "Sim, foi aprovado",
+        "dia_vencimento": "Dia 15",
+        "finalidade_credito": "Investir no pr\u00f3prio neg\u00f3cio",
+        "cartao_credito": "N\u00e3o"
+    },
+    {
+        "nome": "Leonia Costa Dos Reis",
+        "cpf": "03178682333",
+        "telefone": "61009374333",
+        "valor_emprestimo": "R$1.001 - R$3.000",
+        "renda_fixa": "Sim, aut\u00f4nomo",
+        "negativado": "N\u00e3o sei",
+        "solicitou_credito": "Sim, foi negado",
+        "dia_vencimento": "Dia 15",
+        "finalidade_credito": "Investir no pr\u00f3prio neg\u00f3cio",
+        "cartao_credito": "N\u00e3o"
+    },
+    {
+        "nome": "Rafael Silva Miranda",
+        "cpf": "12453954407",
+        "telefone": "84996454719",
+        "valor_emprestimo": "R$1.001 - R$3.000",
+        "renda_fixa": "N\u00e3o tenho renda fixa",
+        "negativado": "N\u00e3o sei",
+        "solicitou_credito": "N\u00e3o",
+        "dia_vencimento": "Dia 25",
+        "finalidade_credito": "Comprar algo importante",
+        "cartao_credito": "N\u00e3o"
+    },
+    {
+        "nome": "Suelen Terezinha Santos",
+        "cpf": "07298695983",
+        "telefone": "41987279117",
+        "valor_emprestimo": "R$500 - R$1.000",
+        "renda_fixa": "N\u00e3o tenho renda fixa",
+        "negativado": "N\u00e3o",
+        "solicitou_credito": "Sim, foi aprovado",
+        "dia_vencimento": "Dia 15",
+        "finalidade_credito": "Comprar algo importante",
+        "cartao_credito": "N\u00e3o"
+    }
+]
