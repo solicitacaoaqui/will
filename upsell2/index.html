@@ -1,0 +1,180 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parabéns</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 28px 20px;
+        }
+        .warning {
+            background-color: #FF0000;
+            color: white;
+            padding: 15px 0;
+            font-weight: bold;
+            font-size: 16px;
+            text-transform: uppercase;
+            width: 100%;
+            text-align: center;
+        }
+        .congratulations {
+            font-size: 32px;
+            color: #2a00e4;
+            margin: 20px 0 5px 0;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .sub-heading {
+            font-size: 16px;
+            color: #999;
+            margin-bottom: 20px;
+        }
+        .progress-container {
+            width: 100%;
+            background-color: #eee;
+            border-radius: 10px;
+            height: 34px;
+            margin: 9px 0;
+            position: relative;
+        }
+        .progress-bar {
+            width: 0%;
+            background-color: #2a00e4;
+            height: 100%;
+            border-radius: 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: width 0.5s ease-in-out;
+        }
+        .progress-text {
+            position: absolute;
+            right: 26px;
+            top: 8px;
+            bottom: 0;
+            margin: auto;
+            font-weight: bold;
+            color: #FFFFFF;
+            font-size: 14px;
+            line-height: 18px;
+        }
+        .info-text {
+            font-size: 16px;
+            margin: 20px 0;
+            line-height: 1.5;
+            color: #333;
+        }
+        .security-fee {
+            font-weight: bold;
+            color: #00A000;
+        }
+        .note {
+            font-size: 14px;
+            color: #1c8a1c;
+            margin: 10px 0;
+        }
+        .pay-button {
+            background-color: #2a00e4;
+            color: white;
+            padding: 15px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            display: inline-block;
+            margin: 20px 0;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .faq {
+            text-align: left;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #333;
+        }
+        .faq p {
+            margin: 5px 0;
+        }
+        .faq .highlight {
+            font-weight: bold;
+        }
+        .faq .highlight.red {
+            color: #FF0000;
+        }
+        .faq .highlight.green {
+            color: #00A000;
+        }
+    </style>
+</head>
+<body>
+    <div class="warning">
+        NÃO SAIA DESSA PÁGINA, POIS SEU EMPRESTIMO PODE DAR ERRO!
+    </div>
+    <div class="container">
+        <h1 class="congratulations">PARABÉNS</h1>
+        <p class="sub-heading">Quase processando o emprestimo</p>
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+            <div class="progress-text" id="progress-text">0%</div>
+        </div>
+        <div class="info-text">
+            Seu emprestimo está garantido! Temos uma taxa de segurança no valor de <span class="security-fee">R$ 48,72</span> para finalizar a transferencia.
+        </div>
+        <p class="note">
+            Após o pagamento, o valor de R$14.000,00 será enviado automaticamente via PIX.
+        </p>
+        <a href="https://go.zeroonepay.com.br/od2aipzg0m" class="pay-button">PAGAR A TAXA E RECEBER AGORA MESMO!</a>
+        <div class="faq">
+            <p><span class="highlight">Dúvidas Frequentes</span></p>
+            <p><span class="highlight">Por que devo pagar essa taxa?</span> Essa taxa deve ser paga <span class="highlight green">HOJE</span> para que possamos liberar o emprestimo e manter a sua segurança em dia, é o custo que temos por usuários e manutenção do nosso aplicativo.</p>
+            <p>Caso não consiga pagar a taxa <span class="highlight">hoje</span>, você perderá sua vaga. <span class="highlight red">NÃO Reembolsável</span></p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const progressBar = document.getElementById('progress-bar');
+            const progressText = document.getElementById('progress-text');
+            let progress = 0;
+            const interval = setInterval(() => {
+                if (progress <= 94) {
+                    progressBar.style.width = progress + '%';
+                    progressText.innerText = progress + '%';
+                    progress++;
+                } else {
+                    clearInterval(interval);
+                }
+            }, 30);
+        });
+    </script>
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '849974283871056');
+  fbq('track', 'PageView');
+  fbq('track', 'ViewContent');
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none" 
+       src="https://www.facebook.com/tr?id=849974283871056&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+
+<script src="js/latest.js" data-utmify-prevent-subids="" async="" defer=""></script>
+
+</body></html>
